@@ -10,7 +10,18 @@
         s.src='https://cdn.pushcrew.com/js/a163f29b2a7d31dd7d861a64ed943d5c.js';
         h=u.getElementsByTagName('script')[0];
         h.parentNode.insertBefore(s,h);
+        h.parentNode.onload = function() {myFunction()};
     })(window,document);
+    
+    function myFunction() {
+        var prevElement = document.querySelector('.pushcrew-btn-allow');
+        prevElement.classList.remove('pushcrew-btn-allow');
+        prevElement.classList.add('pushcrew-custom-btn-allow');
+        var element = document.querySelector('.pushcrew-custom-btn-allow');
+        element.addEventListener('click', function () {
+        _pcq.push(['triggerOptIn',{httpWindowOnly: true}]);
+        });
+    }
 </script>
 </head>
 <body>
