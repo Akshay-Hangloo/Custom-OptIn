@@ -21,9 +21,11 @@ function getCookie(cname) {
     }
     return "";
 }
-     x=getCookie("reference")
-     if(x!=document.referrer)
-     setCookie("reference", x + ";" + document.referrer);
+     x=getCookie("reference");
+     y=document.referrer;
+     if(x!=y){
+     setCookie("reference", x + ";" + y);
+     }
      </script>
      <script type="text/javascript">
     (function(p,u,s,h){
