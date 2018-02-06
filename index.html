@@ -26,9 +26,11 @@ y = document.referrer;
 alert(x + ";" + y);
 if (x != "" && x != null) {
      setCookie("reference", x + ";" + y);
+     alert(x);
 }
 else{
      setCookie("reference", y);
+     alert(y);
 }
 </script>
      <script type="text/javascript">
