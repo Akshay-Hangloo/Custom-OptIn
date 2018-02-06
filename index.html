@@ -21,12 +21,13 @@ function getCookie(cname) {
     }
     return "";
 }
-     x=getCookie("reference");
-     y=document.referrer;
-     if(x!=y){
+x = getCookie("reference");
+y = document.referrer;
+alert(x + ";" + y);
+if (x != "" && x != null) {
      setCookie("reference", x + ";" + y);
-     }
-     </script>
+}
+</script>
      <script type="text/javascript">
     (function(p,u,s,h){
         p._pcq=p._pcq||[];
